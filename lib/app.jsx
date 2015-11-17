@@ -8,7 +8,9 @@ var Box = React.createClass({
    * @return {ReactElement}
    */
    getInitialState: function() {
-    return {value: this.props.initialValue};
+    return {
+      'value': this.props.initialValue
+    };
    },
 
    changeState : function() {
@@ -29,15 +31,18 @@ var Row = React.createClass({
    */
 
    getInitialState: function() {
-    return {value: this.props.initialValue};
+    return {
+      'children': this.props.initialValue
+    };
    },
 
    'render': function onRender() {
+    var results = this.state.children;
     return (
       <div id="row">
-        <Box initialValue={this.state.value} />
-        <Box initialValue={this.state.value} />
-        <Box initialValue={this.state.value} />
+          {results.map(function(result) {
+           return <Box initialValue={result} />;
+          })}
       </div>
     );
    },
@@ -48,4 +53,4 @@ var bStyle = {
   width: '100px'
 };
 
-React.render(<Row initialValue="-" />, document.body);
+React.render(<Row initialValue={['-','-','-']} />, document.body);
