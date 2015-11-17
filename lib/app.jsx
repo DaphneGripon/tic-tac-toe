@@ -38,7 +38,7 @@ var Row = React.createClass({
    'render': function onRender() {
     var results = this.state.children;
     return (
-      <div id="row">
+      <div>
           {results.map(function(result, i) {
            return <span onClick={this.boxClick.bind(this, i)}>
                     <Box id={i} value={this.state.children[i]} />
@@ -49,9 +49,22 @@ var Row = React.createClass({
    },
 });
 
+var Grid = React.createClass({
+
+  'render': function onRender() {
+    return (
+      <div>
+        <Row initialValue={['-','-','-']} />
+        <Row initialValue={['-','-','-']} />
+        <Row initialValue={['-','-','-']} />
+      </div>
+    );
+  }
+});
+
 var bStyle = {
   height: '100px',
   width: '100px'
 };
 
-React.render(<Row initialValue={['-','-','-']} />, document.body);
+React.render(<Grid />, document.body);
