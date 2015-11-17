@@ -19,7 +19,28 @@ var Box = React.createClass({
     return (
       <button onClick={this.changeState} style={bStyle}>{this.state.value}</button>
     );
-  }
+  },
+});
+
+var Row = React.createClass({
+  /**
+   * Render 3 Box elements
+   * @return {ReactElement}
+   */
+
+   getInitialState: function() {
+    return {value: this.props.initialValue};
+   },
+
+   'render': function onRender() {
+    return (
+      <div>
+        <Box initialValue={this.state.value} />
+        <Box initialValue={this.state.value} />
+        <Box initialValue={this.state.value} />
+      </div>
+    );
+   },
 });
 
 var bStyle = {
@@ -27,4 +48,4 @@ var bStyle = {
   width: '100px'
 };
 
-React.render(<Box initialValue="X" />, document.body);
+React.render(<Row initialValue="-" />, document.body);
