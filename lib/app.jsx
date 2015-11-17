@@ -34,7 +34,7 @@ var Row = React.createClass({
 
    'render': function onRender() {
     return (
-      <div>
+      <div id="row">
         <Box initialValue={this.state.value} />
         <Box initialValue={this.state.value} />
         <Box initialValue={this.state.value} />
