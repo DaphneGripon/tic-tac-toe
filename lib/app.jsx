@@ -20,7 +20,7 @@ var Box = React.createClass({
 
   'render': function onRender () {
     return (
-      <button style={bStyle}>{this.state.value}</button>
+      <button onLoad={this.updateState} style={bStyle}>{this.state.value}</button>
     );
   }
 });
