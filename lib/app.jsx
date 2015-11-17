@@ -7,9 +7,13 @@ var Box = React.createClass({
    * Render a HTML button
    * @return {ReactElement}
    */
+   getInitialState: function() {
+    return {value: this.props.initialValue};
+   },
+
   'render': function onRender () {
     return (
-      <button style={bStyle}>{this.props.value}</button>
+      <button style={bStyle}>{this.state.value}</button>
     );
   }
 });
@@ -19,4 +23,4 @@ var bStyle = {
   width: '100px'
 };
 
-React.render(<Box value="X" />, document.body);
+React.render(<Box initialValue="X" />, document.body);
