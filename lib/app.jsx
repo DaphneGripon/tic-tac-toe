@@ -11,16 +11,13 @@ var Box = React.createClass({
     return {value: this.props.initialValue};
    },
 
-   componentWillMount: function() {
-    var currentState = this;
-    this.timer = setInterval(function(){
-      currentState.setState({value: currentState.state.value == "X" ? "O" : "X"});
-    }, 300);
-  },
+   changeState : function() {
+     this.setState({value: this.state.value == "X" ? "O" : "X"});
+   },
 
   'render': function onRender () {
     return (
-      <button style={bStyle}>{this.state.value}</button>
+      <button onClick={this.changeState} style={bStyle}>{this.state.value}</button>
     );
   }
 });
