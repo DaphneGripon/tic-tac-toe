@@ -4,8 +4,8 @@
 
 ## Introduction
 
-[Roadable] is a university project, created by DEVEY Anne-Marie, GRIPON Daphne, PREVOT Astrid.
-It is a roadtrip planner, available through our web and mobile apps.
+Roadable is a university project, created by DEVEY Anne-Marie, GRIPON Daphne, PREVOT Astrid.
+It's a roadtrip planner, available through our web and mobile apps.
 
 ## What you need
 
@@ -47,7 +47,7 @@ There, you can add requests and request methods to add to your API.
 
 To create a table in your database, you need to create a "Schema" (Mongoose).
 
-[General Tutorial](https://github.com/92bondstreet/api-ness/blob/master/presentation.md#build-a-restful-api-with)
+[General Tutorial](https://github.com/92bondstreet/api-ness/blob/master/presentation.md#build-a-restful-api-with) ||
 [Specific Queries Tutorial](http://mongoosejs.com/docs/queries.html)
 
 ### Test
@@ -65,7 +65,7 @@ You can also add a json in the header, to provide information.
 #### List of requests
 
 requests | method | implemented | description | parameters | returns
----------- | ----------- | ----------- | ----------- | -----------
+---------- | ----------- | ----------- | ----------- | ----------- | -----------
 /itinerary | GET | false | Computes the right roadtrip itinerary| start & end date, start & end place, profile & preferences | Returns all the checkpoints of the itinerary, including the name, localization, type, and day of the trip.
 /users | GET | false | Gets all the users | -- | Returns a JSON containing all the users.
 /users | POST | false | Adds a new user | user information (TBD) | Returns the user ID.
